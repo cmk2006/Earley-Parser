@@ -1,32 +1,38 @@
-# Earley Parser
-My implementation of the [Earley parser](https://en.wikipedia.org/wiki/Earley_parser) for syntactic parsing of sentences according to a context-free grammar (CFG).
+# Earley Parser in Python
 
-### Usage
+This project implements the **Earley parsing algorithm** for natural language processing.  
+It can parse sentences according to a given **context-free grammar (CFG)**, detect whether a parse exists, and display the resulting **parse tree**.
 
-Example usage:
+---
 
-```
-python earleyparser.py sample-grammar.txt < sample-sentence.txt
-```
+## 📖 What is the Earley Parser?
 
-More generally, you can run the parser as follow,
+The **Earley Parser** is a type of chart parser for context-free grammars.  
+It is efficient and works with:
+- Left-recursive grammars  
+- Ambiguous grammars  
+- Any context-free grammar  
 
-```
-python earleyparser.py <grammer_file>
-```
+The parser uses three main operations:
+1. **Predictor** – expands non-terminals based on grammar rules.  
+2. **Scanner** – matches terminals against input words.  
+3. **Completer** – completes states and links back to previous rules.  
 
-which reads sentences from standard in, one at a time, printing the parses to standard output using pretty_print(), with parses separated by an extra newline. For sentences that do not have a parse according to the grammar, it prints the sentence back out, unchanged.
+---
 
-Running with the `draw` option, like so,
+## 🛠️ Features
 
-```
-python earleyparser.py draw <grammer_file>
-```
+- Parses sentences using a CFG grammar file.  
+- Handles ambiguous and recursive grammars.  
+- Displays parse results using **NLTK's `Tree`**.  
+- Option to **pretty-print** or **draw** the parse tree.  
 
-displays the parses using NLTK's tree-drawing.
+---
 
-See `sample-grammar.txt` on how to format your grammar. (The parser program requires each rule to only produce non-terminal or terminal symbols, not both.)
+## 📦 Installation
 
-### License
+Clone the repository:
 
-MIT
+```bash
+git clone https://github.com/your-username/earley-parser.git
+cd earley-parser
