@@ -1,4 +1,4 @@
-# earley-parser
+# Earley Parser
 My implementation of the [Earley parser](https://en.wikipedia.org/wiki/Earley_parser) for syntactic parsing of sentences according to a context-free grammar (CFG).
 
 ### Usage
